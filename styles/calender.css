@@ -1,0 +1,64 @@
+.calender {
+  width: 100%;
+  table-layout: fixed;
+  background-color: var(--white);
+  color: var(--black);
+  border-collapse: collapse;
+  margin-block-start: 1rem;
+}
+
+.calender th,
+td {
+  border: 1px solid var(--darker-gray);
+}
+
+.calender td {
+  padding: 1rem 0.5rem 2rem 0.5rem;
+  cursor: pointer;
+}
+
+.calender td:hover {
+  background-color: var(--lighter-gray);
+}
+
+.calender th {
+  padding: 0.5rem;
+}
+
+.dateCell {
+  position: relative;
+}
+
+.displayDate {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.cellInformation > p {
+  margin: 0.5rem 0;
+}
+
+.calendarDate {
+  position: relative;
+  top: 4px;
+  left: 4px;
+}
+
+#currentDay {
+  background-color: var(--cyan);
+  color: var(--white);
+}
+
+#currentDay:hover {
+  background-color: var(--cyan-hovered);
+}
+
+#monthAndYear {
+  font-size: 2rem;
+}
+
+#tableWrapper {
+  padding: 0 0 1rem 0;
+  overflow-x: scroll;
+}

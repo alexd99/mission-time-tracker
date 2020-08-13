@@ -1,0 +1,148 @@
+@import url("./toast.css");
+@import url("./calender.css");
+
+:root {
+  --black: #0a0a0a;
+  --darker-gray: #363636;
+  --grey: #7a7a7a;
+  --lighter-gray: #dbdbdb;
+  --white: #fff;
+  --orange: #ff470f;
+  --yellow: #ffdd57;
+  --green: #23d160;
+  --turquoise: #00d1b2;
+  --turquoise-hovered: #00c4a7;
+  --cyan: #209cee;
+  --cyan-hovered: #1496ed;
+  --blue: #3273dc;
+  --purple: #b86bff;
+  --red: #ff3860;
+  --radius: 4px;
+}
+
+html,
+body {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.noOutline *:focus {
+  outline: none;
+}
+
+.button {
+  border-radius: var(--radius);
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: var(--white);
+  border: 1px solid var(--lighter-gray);
+  color: var(--darker-gray);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.input,
+.textarea {
+  border: 1px solid var(--lighter-gray);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  padding: 0.25rem 0 0.25rem 0.5rem;
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+}
+
+.input:hover,
+.textarea:hover {
+  border-color: #b5b5b5;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--blue);
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  max-width: 50vw;
+  padding-block-end: 1rem;
+}
+
+.formField > label {
+  margin-block-end: 0.5rem;
+}
+
+.cellInformation {
+  margin: 0.5rem 0;
+}
+
+#previousButton,
+#nextButton {
+  background-color: var(--turquoise);
+  color: var(--white);
+}
+
+#previousButton:hover,
+#nextButton:hover {
+  background-color: var(--turquoise-hovered);
+  color: var(--white);
+}
+
+#todayButton {
+  background-color: var(--cyan);
+  color: var(--white);
+}
+
+#todayButton:hover {
+  background-color: var(--cyan-hovered);
+}
+
+#saveButton {
+  background-color: var(--cyan);
+  color: var(--white);
+}
+
+#saveButton:hover {
+  background-color: var(--cyan-hovered);
+}
+
+#controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#addContent {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .calender {
+    width: auto;
+  }
+
+  .formField {
+    max-width: 90vw;
+  }
+
+  #controls > * {
+    flex: auto;
+  }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/1e5d8d8a4b.js"
+      crossorigin="anonymous"
+      sameSite="none"
+    ></script>
+    <title>Mission Time Tracker</title>
+  </head>
+  <body class="noOutline">
+    <div id="controls">
+      <h1 id="monthAndYear"></h1>
+
+      <div id="controlButtons">
+        <button
+          class="button"
+          id="previousButton"
+          title="previous"
+          onclick="previousMonth()"
+        >
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button
+          class="button"
+          id="todayButton"
+          title="jump to today"
+          onclick="getToday()"
+        >
+          Today
+        </button>
+        <button
+          class="button"
+          id="nextButton"
+          title="next"
+          onclick="nextMonth()"
+        >
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="tableWrapper">
+      <table class="calender">
+        <thead>
+          <th>Sunday</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <th>Saturday</th>
+        </thead>
+        <tbody id="calendarBody"></tbody>
+      </table>
+    </div>
+
+    <div id="dateInformation"></div>
+
+    <div id="addContent">
+      <div class="formField">
+        <label for="serviceHours">Hours of Service:</label>
+        <input type="number" class="input" id="serviceHours" />
+      </div>
+
+      <div class="formField">
+        <label for="serviceNotes">Notes: </label>
+        <textarea class="textarea" id="serviceNotes" rows="5"></textarea>
+      </div>
+
+      <button class="button" id="saveButton" onclick="saveInformation()">
+        Save
+      </button>
+    </div>
+
+    <div id="toast"></div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
